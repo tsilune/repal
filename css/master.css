@@ -24,18 +24,20 @@ body {
 	border-radius: 50%;
 	width: 10px;
 	height: 10px;
-	transform: scale(1);
-	transition: .4s;
 }
 
 .ripple.active {
-	transform: scale(10);
-	transition: 4s;
+	animation-name: rippleEffect;
+	animation-duration: .5s;
 }
 
-@keyframes ripple {
+@keyframes rippleEffect {
+	from {
+		background-color: white;
+		opacity: .4;
+	}
+
 	to {
-		opacity: 0;
-		transform: scale(2);
+		transform: scale(20);
 	}
 }
